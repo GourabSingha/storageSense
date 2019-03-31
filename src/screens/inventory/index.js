@@ -20,8 +20,8 @@ export default class inventory extends Component {
               isFetching: true,
               data: []
           };
-      this.changeInventory = this.changeInventory.bind(this);
-      this.loadPieChart = this.loadPieChart.bind(this);
+        this.changeInventory = this.changeInventory.bind(this);
+        this.loadPieChart = this.loadPieChart.bind(this);
     }
 
     setModalVisible(visible) {

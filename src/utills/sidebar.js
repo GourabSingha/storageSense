@@ -26,6 +26,9 @@ class sidebar extends Component {
                     <Button transparent danger onPress = {this.navigateToScreen('quality')}>
                         <Text>Quality Check</Text>
                     </Button>
+                    <Button transparent danger onPress = {this.navigateToScreen('actionList')}>
+                        <Text>Action List</Text>
+                    </Button>
                 </Content>
             </Container>
         );

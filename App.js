@@ -15,6 +15,7 @@ import sideMenu from './src/utills/sidebar'
 import inventory from './src/screens/inventory'
 import inventoryUpdateHistory from './src/screens/inventory/updateHistory'
 import qualityCheck from './src/screens/qualityCheck'
+import actionList from './src/screens/actionList'
 
 const inventoryScreens = createStackNavigator(
     {
@@ -27,10 +28,11 @@ const inventoryScreens = createStackNavigator(
             headerVisible: false,
         }
     }
-)
+);
 
 const homeScreenRouter = createDrawerNavigator(
     {
+        actionList : {screen : actionList},
         quality: { screen : qualityCheck },
         inventory: { screen: inventoryScreens},
         monitor: { screen: monitor },
