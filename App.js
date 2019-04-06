@@ -32,8 +32,8 @@ const inventoryScreens = createStackNavigator(
 
 const homeScreenRouter = createDrawerNavigator(
     {
-        actionList : {screen : actionList},
         quality: { screen : qualityCheck },
+        actionList : {screen : actionList},
         inventory: { screen: inventoryScreens},
         monitor: { screen: monitor },
     },

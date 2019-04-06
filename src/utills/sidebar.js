@@ -29,6 +29,9 @@ class sidebar extends Component {
                     <Button transparent danger onPress = {this.navigateToScreen('actionList')}>
                         <Text>Action List</Text>
                     </Button>
+                    <Button transparent danger>
+                        <Text>Logout</Text>
+                    </Button>
                 </Content>
             </Container>
         );

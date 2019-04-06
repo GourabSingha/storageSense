@@ -94,11 +94,11 @@ export default class actionListData extends Component{
     switchButton(){
         var successList = async function(response){            
             try {
+                var res = response.metadata == "true"? true : false
                 this.setState({
-                    switchButton : response.metadata,
-                    page : 0
+                    switchValue : res,
                 })
-                this.updateList()
+                console.log(this.state.switchValue)
             } catch (error) {
                 Alert.alert(
                     'Something went wrong',
