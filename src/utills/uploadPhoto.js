@@ -1,6 +1,6 @@
 import { Alert, AsyncStorage } from 'react-native';
 
-export async function apiRequest(url, method, suceessCallback, errorCallback){
+export async function apiRequestPost(url, method, data, suceessCallback, errorCallback){
     var token = null;
     const BASEURL = "https://storagesense.herokuapp.com/api";
     
@@ -14,8 +14,9 @@ export async function apiRequest(url, method, suceessCallback, errorCallback){
         headers: {
             'x-token' : token,
             Accept: 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW', 
         },
+        body: data,
     })
     .then((response) => {
         status = response.status;
@@ -28,6 +29,7 @@ export async function apiRequest(url, method, suceessCallback, errorCallback){
             suceessCallback(responseJson)
     })
     .catch((error) => {
+        console.log(error)
         Alert.alert(
             'Something went wrong',
             'Network issue'

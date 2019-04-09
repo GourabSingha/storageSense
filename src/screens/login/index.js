@@ -10,8 +10,8 @@ export default class HelloWorldApp extends Component {
     constructor(props){
         super(props);
         this.state = {
-            email : 'monark2@gmail.com',
-            password : '123',
+            email : 'monark@gmail.com',
+            password : '123456',
             isFetching : false
         }
         this.loginCheck = this.loginCheck.bind(this);

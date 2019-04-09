@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import { Container, View, Fab, Icon, Content, Input, Item, ListItem, Button, Spinner,Header, Body, Left, Title, List,  Card, CardItem, Right} from 'native-base';
 import {Text, Modal, Alert, Image, FlatList, ScrollView } from 'react-native';
 import PhotoUpload from 'react-native-photo-upload'
-import { apiRequestPost } from '../../utills/networkInventory';
+import { apiRequestPost } from '../../utills/uploadPhoto.js';
 import { apiRequest } from '../../utills/networkPostLogin.js';
+import RNFS from 'react-native-fs';
 import moment from 'moment';
+
+
 
 
 export default class qualityCheck extends Component{
@@ -13,11 +16,9 @@ export default class qualityCheck extends Component{
         super(props)
         this.state = {
             modalVisible :  false,
-            imageName : null,
-            imageTaken : false,
             uploading : false,
             page : 0,
-            data : []
+            data : [],
 
         }
         this.image = null;
@@ -101,10 +102,11 @@ export default class qualityCheck extends Component{
                 isFetching: false
             })
         }.bind(this);
-        var sendData =  {
-            name: this.state.imageName, 
-            location: this.image
-        }
+        var sendData = new FormData();
+        sendData.append("image", {uri : this.image.uri,
+            name : this.image.fileName,
+            type : this.image.type});
+        console.log(sendData);
         apiRequestPost('/images', 'POST', sendData, successChange, errorChange);
     }
 
@@ -134,7 +136,7 @@ export default class qualityCheck extends Component{
                                 renderItem = {({ item }) => (
                                     <Card>
                                         <CardItem cardBody>
-                                            <Image source={{uri: '../../../src/images/upload.png'}} style={{height: 200, width: null, flex: 1}}/>
+                                            <Image source={{uri: item.location}} style={{height: 200, width: null, flex: 1}}/>
                                         </CardItem>
                                         <CardItem>
                                             <Left>
@@ -175,12 +177,12 @@ export default class qualityCheck extends Component{
                                     <PhotoUpload
                                         onPhotoSelect={avatar => {
                                             if (avatar) {
-                                                this.setState({
-                                                    imageTaken : true   
-                                                });
-                                                this.image = avatar;
                                             }
-                                        }}>                                 
+                                        }}
+                                        onResponse = {(response) => {
+                                            this.image = response
+                                            }}
+                                        >                                 
                                         <Image
                                             style={{
                                             width: 150,

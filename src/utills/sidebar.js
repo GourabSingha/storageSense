@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
 import {Container, Content, Button, Text} from 'native-base';
-import { Image } from 'react-native';
+import { Image, AsyncStorage } from 'react-native';
 
 class sidebar extends Component {
     navigateToScreen = (route) => () => {
@@ -10,6 +10,11 @@ class sidebar extends Component {
             routeName: route
         });
         this.props.navigation.dispatch(navigateAction);
+    }
+
+    logout(){
+        AsyncStorage.removeItem('@AppStore:token');
+        this.navigateToScreen('notLogin');
     }
 
     render () {
@@ -29,7 +34,7 @@ class sidebar extends Component {
                     <Button transparent danger onPress = {this.navigateToScreen('actionList')}>
                         <Text>Action List</Text>
                     </Button>
-                    <Button transparent danger>
+                    <Button transparent danger onPress = {this.logout}>
                         <Text>Logout</Text>
                     </Button>
                 </Content>

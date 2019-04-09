@@ -163,7 +163,6 @@ export default class inventory extends Component {
                                                 <Picker.Item label="Wheat" value="Wheat" color = {'#FF6C37'} />
                                                 <Picker.Item label="Maize" value="Maize" color = {'#FF6C37'} />
                                                 <Picker.Item label="Barley" value="Barley" color = {'#FF6C37'} />
-                                                <Picker.Item label="Net Banking" value="key4" color = {'#FF6C37'} />
                                             </Picker>
                                         </Item>
                                         <Item regular style = {{borderColor:'#FF6C37'}}>

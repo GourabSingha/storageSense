@@ -60,7 +60,7 @@
 		5FDB1719C0124381BB246431 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1003BED7A5094B89AEFB042A /* libRNSVG-tvOS.a */; };
 		6800D50D6B2741E886C434E3 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A22D380073CE4B37A0CDDF46 /* libRNImagePicker.a */; };
 		667D7C5A918446BE9FB6C63D /* libRCTImageResizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 064EF3EC9C0C4727A3AD7F00 /* libRCTImageResizer.a */; };
-		0092FBBF13FA49AEBB1F64FB /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 080859819080463DAAC0CDC5 /* libRNFS.a */; };
+		B44A3559EEEF46CB930958E0 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DCA9DD3D6347A8B50EFA4C /* libRNFS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,8 +393,8 @@
 		A22D380073CE4B37A0CDDF46 /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		86337A097D4A4CCDB2CB3436 /* RCTImageResizer.xcodeproj */ = {isa = PBXFileReference; name = "RCTImageResizer.xcodeproj"; path = "../node_modules/react-native-image-resizer/ios/RCTImageResizer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		064EF3EC9C0C4727A3AD7F00 /* libRCTImageResizer.a */ = {isa = PBXFileReference; name = "libRCTImageResizer.a"; path = "libRCTImageResizer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		8124330EC7A743368603F74F /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		080859819080463DAAC0CDC5 /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		32F07748B9A24B76932AE499 /* RNFS.xcodeproj */ = {isa = PBXFileReference; name = "RNFS.xcodeproj"; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		74DCA9DD3D6347A8B50EFA4C /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,7 +426,7 @@
 				253514053F364F2C9C6B2821 /* libRNSVG.a in Frameworks */,
 				6800D50D6B2741E886C434E3 /* libRNImagePicker.a in Frameworks */,
 				667D7C5A918446BE9FB6C63D /* libRCTImageResizer.a in Frameworks */,
-				0092FBBF13FA49AEBB1F64FB /* libRNFS.a in Frameworks */,
+				B44A3559EEEF46CB930958E0 /* libRNFS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +618,7 @@
 				152592D0124143CEA2E5FA67 /* RNSVG.xcodeproj */,
 				DF8313AD62AF4BE3892C102A /* RNImagePicker.xcodeproj */,
 				86337A097D4A4CCDB2CB3436 /* RCTImageResizer.xcodeproj */,
-				8124330EC7A743368603F74F /* RNFS.xcodeproj */,
+				32F07748B9A24B76932AE499 /* RNFS.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1291,9 +1291,6 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GSMSv1.app/GSMSv1";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1323,9 +1320,6 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GSMSv1.app/GSMSv1";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1416,9 +1410,6 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1456,9 +1447,6 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1495,9 +1483,6 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1534,9 +1519,6 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
